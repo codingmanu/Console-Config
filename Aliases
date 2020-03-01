@@ -1,0 +1,13 @@
+# Custom console aliases
+# Working in both Ubuntu and macOS 
+# Manuel Gomez 2020
+
+# ls
+# gls needs `coreutils` installed in macOS
+if [[ "$OSTYPE" == linux-gnu ]]; then  # Is this the Ubuntu system?
+    alias ll="ls -alGpFh --color=auto --group-directories-first"
+    alias l="ls -lGpFh --color=auto --group-directories-first"
+else
+    alias ll="gls -alGpFh --color=auto --group-directories-first"
+    alias ls="gls -lGpFh --color=auto --group-directories-first"
+fi
